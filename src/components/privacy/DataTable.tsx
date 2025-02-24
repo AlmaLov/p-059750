@@ -8,7 +8,7 @@ interface DataTableRowProps {
 
 const DataTableRow: FC<DataTableRowProps> = ({ label, content }) => (
   <tr className="border-b border-[#b6b9bb] last:border-b-0">
-    <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">{label}</td>
+    <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">{label}</td>
     <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">{content}</td>
   </tr>
 );
@@ -34,3 +34,4 @@ export const DataTable: FC<DataTableProps> = ({ title, rows }) => {
     </section>
   );
 };
+
