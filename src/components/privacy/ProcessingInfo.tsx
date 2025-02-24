@@ -1,79 +1,97 @@
 import { FC } from "react";
 import { DataTable } from "./DataTable";
-
 export const ProcessingInfo: FC = () => {
-  const dataExporterRows = [
-    { label: "Name:", content: "Customer (as defined in the Agreement)" },
-    { label: "Address:", content: "As set forth in the relevant Order Form." },
-    {
-      label: "Contact person's name, position and contact details:",
-      content: "As set forth in the relevant Order Form.",
-    },
-    {
-      label: "Activities relevant to the data transferred under these Clauses:",
-      content:
-        "Recipient of the Services provided by Alma Labs in accordance with the Agreement.",
-    },
-    {
-      label: "Signature and date:",
-      content: "Signature and date are set out in the Agreement.",
-    },
-    { label: "Role (controller/processor):", content: "Controller" },
-  ];
-
-  const dataImporterRows = [
-    { label: "Name:", content: "Alma Labs Inc." },
-    {
-      label: "Address:",
-      content:
-        "3411 Silverside Rd, Ste 104, Wilmington, New Castle, DE 19810 USA",
-    },
-    {
-      label: "Contact person's name, position and contact details:",
-      content: (
-        <>
+  const dataExporterRows = [{
+    label: "Name:",
+    content: "Customer (as defined in the Agreement)"
+  }, {
+    label: "Address:",
+    content: "As set forth in the relevant Order Form."
+  }, {
+    label: "Contact person's name, position and contact details:",
+    content: "As set forth in the relevant Order Form."
+  }, {
+    label: "Activities relevant to the data transferred under these Clauses:",
+    content: "Recipient of the Services provided by Alma Labs in accordance with the Agreement."
+  }, {
+    label: "Signature and date:",
+    content: "Signature and date are set out in the Agreement."
+  }, {
+    label: "Role (controller/processor):",
+    content: "Controller"
+  }];
+  const dataImporterRows = [{
+    label: "Name:",
+    content: "Alma Labs Inc."
+  }, {
+    label: "Address:",
+    content: "3411 Silverside Rd, Ste 104, Wilmington, New Castle, DE 19810 USA"
+  }, {
+    label: "Contact person's name, position and contact details:",
+    content: <>
           Dhruv Sogani,{" "}
           <span className="text-[#00c4b5]">global.sales@almaconnect.com</span>
         </>
-      ),
-    },
-    {
-      label: "Activities relevant to the data transferred under these Clauses:",
-      content:
-        "Provision of the Services to the Customer in accordance with the Agreement.",
-    },
-    {
-      label: "Signature and date:",
-      content: "Signature and date are set out in the Agreement.",
-    },
-    { label: "Role (controller/processor):", content: "Processor" },
-  ];
-
-  const subProcessorRows = [
-    {
-      name: "Amazon Web Service",
-      description: "Running the Production environment including the Application and Databases",
-      location: "USA"
-    },
-    { name: "Google Workspace", description: "Email services", location: "USA" },
-    { name: "Pivotal Tracker", description: "Work management", location: "USA" },
-    { name: "Mixpanel", description: "Product analytics", location: "USA" },
-    { name: "Google Analytics", description: "Product analytics", location: "USA" },
-    { name: "Razorpay", description: "Payment Gateway", location: "India" },
-    { name: "Easebuzz", description: "Payment Gateway", location: "India" },
-    { name: "Slack", description: "Messaging", location: "USA" },
-    { name: "Github", description: "Code version control", location: "USA" },
-    {
-      name: "Bugsnag",
-      description: "Error monitoring and application stability management.",
-      location: "USA"
-    },
-    { name: "LinkedIn", description: "Networking", location: "USA" },
-    { name: "MongoDB", description: "Database management system", location: "USA" },
-  ];
-
-  return (
-    <div className="space-y-6">
+  }, {
+    label: "Activities relevant to the data transferred under these Clauses:",
+    content: "Provision of the Services to the Customer in accordance with the Agreement."
+  }, {
+    label: "Signature and date:",
+    content: "Signature and date are set out in the Agreement."
+  }, {
+    label: "Role (controller/processor):",
+    content: "Processor"
+  }];
+  const subProcessorRows = [{
+    name: "Amazon Web Service",
+    description: "Running the Production environment including the Application and Databases",
+    location: "USA"
+  }, {
+    name: "Google Workspace",
+    description: "Email services",
+    location: "USA"
+  }, {
+    name: "Pivotal Tracker",
+    description: "Work management",
+    location: "USA"
+  }, {
+    name: "Mixpanel",
+    description: "Product analytics",
+    location: "USA"
+  }, {
+    name: "Google Analytics",
+    description: "Product analytics",
+    location: "USA"
+  }, {
+    name: "Razorpay",
+    description: "Payment Gateway",
+    location: "India"
+  }, {
+    name: "Easebuzz",
+    description: "Payment Gateway",
+    location: "India"
+  }, {
+    name: "Slack",
+    description: "Messaging",
+    location: "USA"
+  }, {
+    name: "Github",
+    description: "Code version control",
+    location: "USA"
+  }, {
+    name: "Bugsnag",
+    description: "Error monitoring and application stability management.",
+    location: "USA"
+  }, {
+    name: "LinkedIn",
+    description: "Networking",
+    location: "USA"
+  }, {
+    name: "MongoDB",
+    description: "Database management system",
+    location: "USA"
+  }];
+  return <div className="space-y-6">
       <h2 className="text-[#282a2c] text-lg font-bold leading-8">
         1. List of Parties
       </h2>
@@ -89,7 +107,7 @@ export const ProcessingInfo: FC = () => {
           Applicable Data Protection Clause
         </div>
         <div className="flex items-stretch gap-[17px] leading-none">
-          <div className="border-l border-[#b6b9bb] h-20" />
+          
           <div className="my-auto">Data Protection Authority</div>
         </div>
       </div>
@@ -280,8 +298,7 @@ export const ProcessingInfo: FC = () => {
             </tr>
           </thead>
           <tbody>
-            {subProcessorRows.map((row, index) => (
-              <tr key={index} className="border-b border-[#b6b9bb] last:border-b-0">
+            {subProcessorRows.map((row, index) => <tr key={index} className="border-b border-[#b6b9bb] last:border-b-0">
                 <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 border-r border-[#b6b9bb]">
                   {row.name}
                 </td>
@@ -291,11 +308,9 @@ export const ProcessingInfo: FC = () => {
                 <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4">
                   {row.location}
                 </td>
-              </tr>
-            ))}
+              </tr>)}
           </tbody>
         </table>
       </div>
-    </div>
-  );
+    </div>;
 };
