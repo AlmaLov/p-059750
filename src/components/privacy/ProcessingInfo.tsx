@@ -49,6 +49,29 @@ export const ProcessingInfo: FC = () => {
     { label: "Role (controller/processor):", content: "Processor" },
   ];
 
+  const subProcessorRows = [
+    {
+      name: "Amazon Web Service",
+      description: "Running the Production environment including the Application and Databases",
+      location: "USA"
+    },
+    { name: "Google Workspace", description: "Email services", location: "USA" },
+    { name: "Pivotal Tracker", description: "Work management", location: "USA" },
+    { name: "Mixpanel", description: "Product analytics", location: "USA" },
+    { name: "Google Analytics", description: "Product analytics", location: "USA" },
+    { name: "Razorpay", description: "Payment Gateway", location: "India" },
+    { name: "Easebuzz", description: "Payment Gateway", location: "India" },
+    { name: "Slack", description: "Messaging", location: "USA" },
+    { name: "Github", description: "Code version control", location: "USA" },
+    {
+      name: "Bugsnag",
+      description: "Error monitoring and application stability management.",
+      location: "USA"
+    },
+    { name: "LinkedIn", description: "Networking", location: "USA" },
+    { name: "MongoDB", description: "Database management system", location: "USA" },
+  ];
+
   return (
     <div className="space-y-6">
       <h2 className="text-[#282a2c] text-lg font-bold leading-8">
@@ -179,7 +202,7 @@ export const ProcessingInfo: FC = () => {
                 customer information, processing payments, providing financing,
                 providing analytic services, providing storage, or providing
                 similar services on behalf of the business.</div>
-                <div>☐ Providing advertising and marketing services, except for
+                <div>☒ Providing advertising and marketing services, except for
                 cross-context behavioral advertising, to the consumer provided
                 that, for the purpose of advertising and marketing, a service
                 provider or contractor shall not combine the personal
@@ -231,6 +254,45 @@ export const ProcessingInfo: FC = () => {
                 order forms.
               </td>
             </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 className="text-[#282a2c] text-lg font-bold leading-8 mt-8">
+        Annex 2
+      </h2>
+      <h3 className="text-[#282a2c] text-lg font-bold leading-8 text-center">
+        Alma Labs' Sub-processors
+      </h3>
+      <div className="bg-white border border-[#b6b9bb] mt-3">
+        <table className="w-full border-collapse">
+          <thead>
+            <tr className="border-b border-[#b6b9bb] bg-[#f5f5f5]">
+              <th className="text-sm text-[#3a3f42] font-semibold leading-5 p-4 text-left border-r border-[#b6b9bb]">
+                Name of Sub-processor
+              </th>
+              <th className="text-sm text-[#3a3f42] font-semibold leading-5 p-4 text-left border-r border-[#b6b9bb]">
+                Description of Processing
+              </th>
+              <th className="text-sm text-[#3a3f42] font-semibold leading-5 p-4 text-left">
+                Location of Sub-processor
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {subProcessorRows.map((row, index) => (
+              <tr key={index} className="border-b border-[#b6b9bb] last:border-b-0">
+                <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 border-r border-[#b6b9bb]">
+                  {row.name}
+                </td>
+                <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 border-r border-[#b6b9bb]">
+                  {row.description}
+                </td>
+                <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4">
+                  {row.location}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
