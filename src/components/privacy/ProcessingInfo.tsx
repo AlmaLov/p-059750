@@ -75,68 +75,62 @@ export const ProcessingInfo: FC = () => {
         3. Processing Information
       </h2>
       <div className="bg-white border border-[#b6b9bb] mt-3">
-        <div className="p-4 space-y-4">
-          <div className="grid grid-cols-2 gap-5">
-            <div className="text-sm text-[#3a3f42] font-normal">
-              <div className="leading-5">
+        <table className="w-full border-collapse">
+          <tbody>
+            <tr className="border-b border-[#b6b9bb]">
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">
                 Categories of data subjects whose personal data is transferred
-              </div>
-              <div className="mt-[114px]">
-                Categories of personal data transferred
-              </div>
-              <div className="mt-[113px]">
-                Sensitive personal data transferred
-              </div>
-              <div className="mt-5">Frequency of the transfer</div>
-              <div className="mt-[60px]">Nature of the processing</div>
-              <div className="mt-[45px]">
-                Purpose of the data transfer and further processing
-              </div>
-              <div className="mt-[750px]">
-                For processing involving California consumers, please select the
-                Business Purpose(s) for Processing Personal Data
-              </div>
-              <div className="mt-[700px]">
-                Period for which the personal data will be retained or criteria
-                used to determine that period
-              </div>
-              <div className="mt-10">
-                Subprocessor transfers – subject matter, nature, and duration of
-                processing
-              </div>
-            </div>
-
-            <div className="text-sm text-[#3a3f42] font-normal">
-              <div className="leading-none">
+              </td>
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">
                 Customer's authorized users of the Services
-              </div>
-
-              <div className="mt-[30px] leading-none">
-                Processed automatically by the Services:
-              </div>
-              <div className="mt-[9px]">
-                Name
-                <br />
-                Email
-              </div>
-
-              <div className="mt-[9px]">
-                Processed where and to the extent provided by Customer or its
-                authorized users in connection with audit services provided by
-                Alma Labs:
-              </div>
-              <div className="mt-[9px]">
-                address
-                <br />
-                date of birth
-                <br />
-                past employment details
-              </div>
-
-              <div className="leading-none mt-5">None</div>
-              <div className="leading-none mt-5">Continuous</div>
-
-              <div className="mt-5">
+              </td>
+            </tr>
+            <tr className="border-b border-[#b6b9bb]">
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">
+                Categories of personal data transferred
+              </td>
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">
+                <div>Processed automatically by the Services:</div>
+                <div className="mt-2">
+                  Name
+                  <br />
+                  Email
+                </div>
+                <div className="mt-4">
+                  Processed where and to the extent provided by Customer or its
+                  authorized users in connection with audit services provided by
+                  Alma Labs:
+                </div>
+                <div className="mt-2">
+                  address
+                  <br />
+                  date of birth
+                  <br />
+                  past employment details
+                </div>
+              </td>
+            </tr>
+            <tr className="border-b border-[#b6b9bb]">
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">
+                Sensitive personal data transferred
+              </td>
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">
+                None
+              </td>
+            </tr>
+            <tr className="border-b border-[#b6b9bb]">
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">
+                Frequency of the transfer
+              </td>
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">
+                Continuous
+              </td>
+            </tr>
+            <tr className="border-b border-[#b6b9bb]">
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">
+                Nature of the processing
+              </td>
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">
                 The nature of the processing is more fully described in the
                 Agreement and accompanying order forms but will include the
                 following basic processing activities: The provision of Services
@@ -144,50 +138,48 @@ export const ProcessingInfo: FC = () => {
                 identifying Customer Personal Data to permit Alma Labs to query,
                 cleanse, standardize, enrich, (when required) send to additional
                 data to feed providers, and to store the query information.
-                <br />
-                <br />
+              </td>
+            </tr>
+            <tr className="border-b border-[#b6b9bb]">
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">
+                Purpose of the data transfer and further processing
+              </td>
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">
                 The purpose of the transfer is to facilitate the performance of
                 the Services more fully described in the Agreement and
                 accompanying order forms.
-              </div>
-
-              <div className="mt-5">
-                ☐ N/A
-                <br />
-                <br />
-                ☐ Auditing related to counting ad impressions to unique
+              </td>
+            </tr>
+            <tr className="border-b border-[#b6b9bb]">
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">
+                For processing involving California consumers, please select the
+                Business Purpose(s) for Processing Personal Data
+              </td>
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top space-y-4">
+                <div>☐ N/A</div>
+                <div>☐ Auditing related to counting ad impressions to unique
                 visitors, verifying positioning and quality of ad impressions,
                 and auditing compliance with this specification and other
-                standards
-                <br />
-                <br />
-                ☒ Helping to ensure security and integrity to the extent the use
+                standards</div>
+                <div>☒ Helping to ensure security and integrity to the extent the use
                 of the consumer's personal information is reasonably necessary
-                and proportionate for these purposes
-                <br />
-                <br />
-                ☒ Debugging to identify and repair errors that impair existing
-                intended functionality.
-                <br />
-                <br />
-                ☐ Short-term, transient use, including, but not limited to,
+                and proportionate for these purposes</div>
+                <div>☒ Debugging to identify and repair errors that impair existing
+                intended functionality.</div>
+                <div>☐ Short-term, transient use, including, but not limited to,
                 non-personalized advertising shown as part of a consumer's
                 current interaction with the business, provided that the
                 consumer's personal information is not disclosed to another
                 third party and is not used to build a profile about the
                 consumer or otherwise alter the consumer's experience outside
-                the current interaction with the business.
-                <br />
-                <br />
-                ☒ Performing services on behalf of the business, including
+                the current interaction with the business.</div>
+                <div>☒ Performing services on behalf of the business, including
                 maintaining or servicing accounts, providing customer service,
                 processing or fulfilling orders and transactions, verifying
                 customer information, processing payments, providing financing,
                 providing analytic services, providing storage, or providing
-                similar services on behalf of the business.
-                <br />
-                <br />
-                ☐ Providing advertising and marketing services, except for
+                similar services on behalf of the business.</div>
+                <div>☐ Providing advertising and marketing services, except for
                 cross-context behavioral advertising, to the consumer provided
                 that, for the purpose of advertising and marketing, a service
                 provider or contractor shall not combine the personal
@@ -195,51 +187,52 @@ export const ProcessingInfo: FC = () => {
                 contractor receives from, or on behalf of, the business with
                 personal information that the service provider or contractor
                 receives from, or on behalf of, another person or persons or
-                collects from its own interaction with consumers.
-                <br />
-                <br />
-                ☒ Undertaking internal research for technological development
-                and demonstration.
-                <br />
-                <br />
-                ☒ Undertaking activities to verify or maintain the quality or
+                collects from its own interaction with consumers.</div>
+                <div>☒ Undertaking internal research for technological development
+                and demonstration.</div>
+                <div>☒ Undertaking activities to verify or maintain the quality or
                 safety of a service or device that is owned, manufactured,
                 manufactured for, or controlled by the business, and to improve,
                 upgrade, or enhance the service or device that is owned,
-                manufactured, manufactured for or controlled by the business.
-                <br />
-                <br />
-                ☒ To retain and employ another service provider or contractor as
+                manufactured, manufactured for or controlled by the business.</div>
+                <div>☒ To retain and employ another service provider or contractor as
                 a subcontractor where the subcontractor meets the requirements
-                for a service provider or contractor under CCPA.
-                <br />
-                <br />
-                ☒ To build or improve the quality of the services it is
+                for a service provider or contractor under CCPA.</div>
+                <div>☒ To build or improve the quality of the services it is
                 providing to the business even if this Business Purpose is not
                 specified in the written contract required by CCPA provided that
                 Service Provider does not use the Customer Personal Data to
-                perform Services on behalf of another person.
-                <br />
-                <br />☒ To prevent, detect, or investigate data security
+                perform Services on behalf of another person.</div>
+                <div>☒ To prevent, detect, or investigate data security
                 incidents or protect against malicious, deceptive, fraudulent,
                 or illegal activity, even if this Business Purpose is not
-                specified in the written contract.
-              </div>
-
-              <div className="mt-5">
+                specified in the written contract.</div>
+              </td>
+            </tr>
+            <tr className="border-b border-[#b6b9bb]">
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">
+                Period for which the personal data will be retained or criteria
+                used to determine that period
+              </td>
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">
                 The period for which the Customer Personal Data will be retained
                 is more fully described in the Agreement, Addendum, and
                 accompanying order forms.
-              </div>
-
-              <div className="mt-5">
+              </td>
+            </tr>
+            <tr className="border-b border-[#b6b9bb] last:border-b-0">
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top border-r border-[#b6b9bb]">
+                Subprocessor transfers – subject matter, nature, and duration of
+                processing
+              </td>
+              <td className="text-sm text-[#3a3f42] font-normal leading-5 p-4 w-1/2 align-top">
                 The subject matter, nature, and duration of the Processing more
                 fully described in the Agreement, Addendum, and accompanying
                 order forms.
-              </div>
-            </div>
-          </div>
-        </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
